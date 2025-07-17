@@ -45,15 +45,11 @@ A fully functional RESTful API built using **Spring Boot** and **PostgreSQL** to
 ├── pom.xml
 └── README.md
 
+```
 ## 🚀 How to Run Locally
+```bash
+### 1. Clone the Repository
 
-### ✅ Prerequisites
-
-- Java 17+
-- Maven
-- PostgreSQL (running locally)
-
-1. Clone the Repository
 git clone https://github.com/Rajeshgonela/Crud.git
 cd Crud
 
@@ -80,5 +76,5 @@ Once the app is running, go to:
 http://localhost:8080/swagger-ui/index.html
 
 
-
+```
 
