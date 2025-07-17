@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +23,7 @@ public class UserController {
 
     @Operation(summary = "Register a new user", description = "Registers a new user with the provided details.")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "User registered successfully"),
+            @ApiResponse(responseCode = "201", description = "User registered successfully"),
             @ApiResponse(responseCode = "409", description = "User with this email already exists"),
             @ApiResponse(responseCode = "400", description = "Invalid input data")
     })
@@ -31,7 +32,7 @@ public class UserController {
             @Parameter(description = "User details for registration")
             @Valid @RequestBody UserDto userDto) {
         UserResponseDto response = userService.registerUser(userDto);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @Operation(summary = "Get user by ID", description = "Retrieves a user by their unique ID.")
