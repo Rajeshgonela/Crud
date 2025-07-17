@@ -48,7 +48,14 @@ A fully functional RESTful API built using **Spring Boot** and **PostgreSQL** to
 ```
 ## 🚀 How to Run Locally
 ```bash
-### 1. Clone the Repository
+
+✅ Prerequisites
+
+- Java 17+
+- Maven
+- PostgreSQL (running locally)
+
+1. Clone the Repository
 
 git clone https://github.com/Rajeshgonela/Crud.git
 cd Crud
