@@ -11,8 +11,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Resume Project API")
+                        .title("CRUD API")
                         .version("1.0")
-                        .description("API documentation for Resume Project"));
+                        .description("API documentation for CRUD operations on User entity"));
     }
 }
