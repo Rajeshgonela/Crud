@@ -33,7 +33,7 @@ A fully functional RESTful API built using **Spring Boot** and **PostgreSQL** to
 ```bash
 ├── src
 │   ├── main
-│   │   ├── java/com/example/crud
+│   │   ├── java/com/project/crud
 │   │   │   ├── controller
 │   │   │   ├── dto
 │   │   │   ├── model
