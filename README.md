@@ -44,3 +44,41 @@ A fully functional RESTful API built using **Spring Boot** and **PostgreSQL** to
 │   │       ├── application.properties
 ├── pom.xml
 └── README.md
+
+## 🚀 How to Run Locally
+
+### ✅ Prerequisites
+
+- Java 17+
+- Maven
+- PostgreSQL (running locally)
+
+1. Clone the Repository
+git clone https://github.com/Rajeshgonela/Crud.git
+cd Crud
+
+2. Set Up PostgreSQL Database
+Ensure PostgreSQL is installed and running.
+Create a database named user_crud (or your preferred name):
+
+3.Update application.properties
+Edit the file:
+src/main/resources/application.properties
+
+properties:
+spring.datasource.url=jdbc:postgresql://localhost:5432/user_crud
+spring.datasource.username=YOUR_DB_USERNAME
+spring.datasource.password=YOUR_DB_PASSWORD
+spring.jpa.hibernate.ddl-auto=update
+
+4.Build and Run the Application
+mvn clean install
+mvn spring-boot:run
+
+5.Access Swagger UI
+Once the app is running, go to:
+http://localhost:8080/swagger-ui/index.html
+
+
+
+
